@@ -1,0 +1,17 @@
+<section>
+    <form action="" method="get">
+        {% for field in form %}
+            {{ field }}
+        {% endfor %}
+    <input type="submit" value="Get station list" />
+    </form>
+    <p>See below list of stations: </p>
+    <ul>
+        {% for thing in station_list %}
+            <li>{{ thing.Name }}</li>
+        {% endfor %}
+    </ul>
+</section>
+<section>
+    <p><a href="{% url 'transit:home' %}">Home</a></p>
+</section>
