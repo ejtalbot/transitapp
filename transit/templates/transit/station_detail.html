@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ station.name }}</title>
+</head>
+<section>
+<p>Station Lines:</p>
+<ul>
+    <li>{{ station.line }}</li>
+    {% if station.line2 is not None %}
+    <li>{{ station.line2 }}</li>
+    {% endif %}
+    {% if station.line3 is not None %}
+    <li>{{ station.line3 }}</li>
+    {% endif %}
+    {% if station.line4 is not None %}
+    <li>{{ station.line4 }}</li>
+    {% endif %}
+    {% if station.code2.line is not None %}
+    <li>{{ station.code2.line }}</li>
+    {% endif %}
+</ul>
+</section>
+<section>
+    <p><a href="{% url 'transit:home' %}">Home</a></p>
+</section>

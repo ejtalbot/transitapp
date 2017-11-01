@@ -14,4 +14,4 @@ def getAllStations(api_url):
     response = requests.get(url, headers = headers)
     return(response.json())
 
-print(getAllStations(this_url))
+#print(getAllStations(this_url))

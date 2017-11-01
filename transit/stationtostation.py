@@ -16,4 +16,4 @@ def getStationToStation(fromStation, toStation):
     response = requests.get(url, headers = headers)
     return(response.json())
 
-print(getStationToStation('E10', 'J03'))
+#print(getStationToStation('E10', 'J03'))

@@ -6,9 +6,10 @@
     <input type="submit" value="Get station list" />
     </form>
     <p>See below list of stations: </p>
+    <!-- Need to account for stations that have multiple lines -->
     <ul>
-        {% for thing in station_list %}
-            <li>{{ thing.name }}</li>
+        {% for station in station_list %}
+            <li><a href="{% url 'transit:stationDetails' station.id %}">{{ station.name }}</a></li>
         {% endfor %}
     </ul>
 </section>
